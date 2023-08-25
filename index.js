@@ -21,7 +21,7 @@ async function main() {
       console.log(`http://localhost:${port}`);
     });
   } catch (error) {
-    console.log(`Unable to connect to the database ${error}`);
+    console.log(`Error de conexion a la base de datos ${error}`);
   }
 }
 main();
