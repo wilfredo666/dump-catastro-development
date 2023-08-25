@@ -19,6 +19,16 @@ async function main() {
     console.log("Connection has been established successfuly");
     app.listen(port, () => {
       console.log(`http://localhost:${port}`);
+//prueba de consulta
+      sequelize.query('SELECT nombre FROM catastro.distritos')
+        .then(result => {
+        console.log('Resultado de la consulta:', result);
+      })
+        .catch(err => {
+        console.error('Error en la consulta:', err);
+      });
+
+
     });
   } catch (error) {
     console.log(`Error de conexion a la base de datos ${error}`);
