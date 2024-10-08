@@ -16,11 +16,11 @@ app.use("/api/poligonos", require("./src/app/router/poligonos"));
 async function main() {
   try {
     await sequelize.authenticate();
-    console.log("Connection has been established successfuly");
+    console.log("Conexion a la base de datos establecida");
     app.listen(port, () => {
       console.log(`http://localhost:${port}`);
 //prueba de consulta
-      sequelize.query('SELECT nombre FROM catastro.distritos')
+      sequelize.query('SELECT * FROM catastro.terrenos19')
         .then(result => {
         console.log('Resultado de la consulta:', result);
       })
